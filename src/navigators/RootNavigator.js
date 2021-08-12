@@ -10,7 +10,11 @@ const Stack = createStackNavigator();
 
 export const RootNavigator = () => {
   return (
-    <Stack.Navigator initialRouteName={'gender'}>
+    <Stack.Navigator
+      initialRouteName={'gender'}
+      screenOptions={{
+        header: () => null,
+      }}>
       <Stack.Screen name={'gender'} component={GenderScreen} />
       <Stack.Screen name={'age'} component={AgeScreen} />
       <Stack.Screen name={'eula'} component={EULAScreen} />
