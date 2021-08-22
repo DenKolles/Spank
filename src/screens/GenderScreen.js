@@ -1,31 +1,98 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, Button} from 'react-native';
+import {View, Text, StyleSheet, Button, TouchableOpacity} from 'react-native';
 
 export class GenderScreen extends Component {
   render = () => {
     const {navigate} = this.props.navigation;
     return (
-      <View style={styles.container}>
-        <View style={styles.formHeader}>
-          <Text style={{fontSize: 30}}>Choose your gender</Text>
+    <View style={styles.container}>
+          <View style={styles.formHeader}>
+            <Text
+              style={ styles.button, {
+                fontSize: 25,
+                color: 'rgb(240, 86, 39)',
+                fontWeight: 'bold',
+                fontStyle: 'italic',
+              }}>
+              Choose your gender
+            </Text>
+          </View>
+          <View style={styles.genderForm}>
+            <TouchableOpacity
+              style={ styles.button, {
+                alignItems: 'center',
+                backgroundColor: '#ffffff',
+              }}
+              onPress={() => {}}>
+              <Text style={{marginVertical: 10, marginHorizontal: 35}}>Male</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={ styles.button, {
+                alignItems: 'center',
+                backgroundColor: '#ffffff',
+              }}
+              onPress={() => {}}>
+              <Text style={{marginVertical: 10, marginHorizontal: 35}}>Female</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={{
+                alignItems: 'center',
+                backgroundColor: '#ffffff',
+              }}
+              onPress={() => {}}>
+              <Text style={{marginVertical: 10, marginHorizontal: 35}}>Other</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.formHeader}>
+            <Text
+              style={{
+                fontSize: 25,
+                color: 'rgb(240, 86, 39)',
+                fontWeight: 'bold',
+                fontStyle: 'italic',
+              }}>
+              Who are you looking for?
+            </Text>
+          </View>
+          <View style={styles.genderForm}>
+            <TouchableOpacity
+             title="Male"  style={ styles.button, {
+                alignItems: 'center',
+                backgroundColor: '#ffffff',
+              }}>
+              <Text style={{marginVertical: 10, marginHorizontal: 35}}>Male</Text></
+
+              TouchableOpacity>
+            <TouchableOpacity title="Female"
+              style={ styles.button, {
+                alignItems: 'center',
+                backgroundColor: '#ffffff',
+              }}>
+              <Text style={{marginVertical: 10, marginHorizontal: 35}}>Female</Text></
+
+              TouchableOpacity>
+            <TouchableOpacity title="other"
+              style={ styles.button, {
+                alignItems: 'center',
+                backgroundColor: '#ffffff',
+              }}>
+              <Text style={{marginVertical: 10, marginHorizontal: 35}}>other</Text></
+
+              TouchableOpacity>
+
+          </View>
+          <View style={styles.formSubmit}>
+             <TouchableOpacity title="LET'S GO!"
+              style={ styles.button, {marginVertical: 10, marginHorizontal: 80,
+                alignItems: 'center',
+                backgroundColor: '#ffffff',
+              }}
+              onPress={() => navigate('age')}>
+              <Text style={{marginVertical: 10, marginHorizontal: 35}}>LET'S GO!</Text></
+
+              TouchableOpacity>
+          </View>
         </View>
-        <View style={styles.genderForm}>
-          <Button title="Male" />
-          <Button title="Female" />
-          <Button title="Other" />
-        </View>
-        <View style={styles.formHeader}>
-          <Text style={{fontSize: 30}}>Who are you looking for?</Text>
-        </View>
-        <View style={styles.genderForm}>
-          <Button title="Male" />
-          <Button title="Female" />
-          <Button title="Other" />
-        </View>
-        <View style={styles.formSubmit}>
-          <Button title="NEXT" onPress={() => navigate('age')} />
-        </View>
-      </View>
     );
   };
 }
@@ -33,6 +100,9 @@ export class GenderScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "'rgb(255, 229, 97)'",
+  },
+  button: {
   },
   formHeader: {
     flex: 1,
@@ -43,7 +113,8 @@ const styles = StyleSheet.create({
     flex: 2,
     alignItems: 'center',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    justifyContent: 'space-evenly',
     marginHorizontal: 30,
   },
   formSubmit: {
