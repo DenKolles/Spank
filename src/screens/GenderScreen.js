@@ -1,98 +1,79 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, Button, TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
 export class GenderScreen extends Component {
   render = () => {
     const {navigate} = this.props.navigation;
-    return (
-    <View style={styles.container}>
-          <View style={styles.formHeader}>
-            <Text
-              style={ styles.button, {
-                fontSize: 25,
-                color: 'rgb(240, 86, 39)',
-                fontWeight: 'bold',
-                fontStyle: 'italic',
-              }}>
-              Choose your gender
-            </Text>
-          </View>
-          <View style={styles.genderForm}>
-            <TouchableOpacity
-              style={ styles.button, {
-                alignItems: 'center',
-                backgroundColor: '#ffffff',
-              }}
-              onPress={() => {}}>
-              <Text style={{marginVertical: 10, marginHorizontal: 35}}>Male</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={ styles.button, {
-                alignItems: 'center',
-                backgroundColor: '#ffffff',
-              }}
-              onPress={() => {}}>
-              <Text style={{marginVertical: 10, marginHorizontal: 35}}>Female</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={{
-                alignItems: 'center',
-                backgroundColor: '#ffffff',
-              }}
-              onPress={() => {}}>
-              <Text style={{marginVertical: 10, marginHorizontal: 35}}>Other</Text>
-            </TouchableOpacity>
-          </View>
-          <View style={styles.formHeader}>
-            <Text
-              style={{
-                fontSize: 25,
-                color: 'rgb(240, 86, 39)',
-                fontWeight: 'bold',
-                fontStyle: 'italic',
-              }}>
-              Who are you looking for?
-            </Text>
-          </View>
-          <View style={styles.genderForm}>
-            <TouchableOpacity
-             title="Male"  style={ styles.button, {
-                alignItems: 'center',
-                backgroundColor: '#ffffff',
-              }}>
-              <Text style={{marginVertical: 10, marginHorizontal: 35}}>Male</Text></
 
-              TouchableOpacity>
-            <TouchableOpacity title="Female"
-              style={ styles.button, {
-                alignItems: 'center',
-                backgroundColor: '#ffffff',
-              }}>
-              <Text style={{marginVertical: 10, marginHorizontal: 35}}>Female</Text></
-
-              TouchableOpacity>
-            <TouchableOpacity title="other"
-              style={ styles.button, {
-                alignItems: 'center',
-                backgroundColor: '#ffffff',
-              }}>
-              <Text style={{marginVertical: 10, marginHorizontal: 35}}>other</Text></
-
-              TouchableOpacity>
-
-          </View>
-          <View style={styles.formSubmit}>
-             <TouchableOpacity title="LET'S GO!"
-              style={ styles.button, {marginVertical: 10, marginHorizontal: 80,
-                alignItems: 'center',
-                backgroundColor: '#ffffff',
-              }}
-              onPress={() => navigate('age')}>
-              <Text style={{marginVertical: 10, marginHorizontal: 35}}>LET'S GO!</Text></
-
-              TouchableOpacity>
-          </View>
+    const CirclePattern = props => {
+      let rows = [];
+      let cols = [];
+      for (let i = 0; i < props.height; i++) {
+        rows.push(i);
+      }
+      for (let i = 0; i < props.width; i++) {
+        cols.push(i);
+      }
+      return (
+        <View style={{position: 'absolute', top: 15, left: 5, zIndex: -1}}>
+          {rows.map((row, rowIndex) => {
+            return (
+              <View key={rowIndex} style={styles.row}>
+                {cols.map((col, colIndex) => {
+                  return <View key={colIndex} style={styles.circle} />;
+                })}
+              </View>
+            );
+          })}
         </View>
+      );
+    };
+
+    return (
+      <View style={styles.container}>
+        <View style={styles.formHeader}>
+          <Text style={styles.formHeaderText}>Choose your gender</Text>
+        </View>
+        <View style={styles.selectForm}>
+          <TouchableOpacity style={styles.selectButton} onPress={() => {}}>
+            <Text style={styles.selectButtonText}>Male</Text>
+            <CirclePattern width="20" height="7" />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.selectButton} onPress={() => {}}>
+            <Text style={styles.selectButtonText}>Female</Text>
+            <CirclePattern width="20" height="7" />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.selectButton} onPress={() => {}}>
+            <Text style={styles.selectButtonText}>Other</Text>
+            <CirclePattern width="20" height="7" />
+          </TouchableOpacity>
+        </View>
+        <View style={styles.formHeader}>
+          <Text style={styles.formHeaderText}>Who are you looking for?</Text>
+        </View>
+        <View style={styles.selectForm}>
+          <TouchableOpacity style={styles.selectButton} onPress={() => {}}>
+            <Text style={styles.selectButtonText}>Male</Text>
+            <CirclePattern width="20" height="7" />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.selectButton} onPress={() => {}}>
+            <Text style={styles.selectButtonText}>Female</Text>
+            <CirclePattern width="20" height="7" />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.selectButton} onPress={() => {}}>
+            <Text style={styles.selectButtonText}>Other</Text>
+            <CirclePattern width="20" height="7" />
+          </TouchableOpacity>
+        </View>
+        <View style={styles.formSubmit}>
+          <TouchableOpacity
+            style={styles.submitButton}
+            onPress={() => navigate('age')}>
+            <Text style={styles.submitButtonText}>LET'S GO!</Text>
+            <CirclePattern width="37" height="7" />
+          </TouchableOpacity>
+        </View>
+      </View>
     );
   };
 }
@@ -102,14 +83,61 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "'rgb(255, 229, 97)'",
   },
-  button: {
+  row: {
+    flexDirection: 'row',
+  },
+  circle: {
+    width: 3.31,
+    height: 3.31,
+    borderRadius: 10 / 2,
+    margin: 1.8,
+    backgroundColor: '#353535',
+  },
+  selectButton: {
+    width: 130,
+    height: 50,
+    margin: 15,
+  },
+  selectButtonText: {
+    width: '100%',
+    height: '100%',
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    backgroundColor: '#ffffff',
+    fontSize: 20,
+    fontFamily: 'OpenSans-Regular',
+  },
+  submitButton: {
+    marginHorizontal: 50,
+    marginVertical: 5,
+    width: 247,
+    height: 50,
+  },
+  submitButtonText: {
+    width: '100%',
+    height: '100%',
+    textAlign: 'center',
+    lineHeight: 45,
+    backgroundColor: '#949494',
+    fontSize: 30,
+    fontFamily: 'Bangers-Regular',
+    color: '#ffffff',
   },
   formHeader: {
     flex: 1,
-    alignItems: 'center',
+    alignItems: 'stretch',
     justifyContent: 'center',
   },
-  genderForm: {
+  formHeaderText: {
+    fontSize: 30,
+    color: '#F05627',
+    fontFamily: 'Bangers-Regular',
+    textAlign: 'center',
+    textShadowColor: 'rgba(0, 0, 0, 0.75)',
+    textShadowOffset: {width: 1, height: 1},
+    textShadowRadius: 1,
+  },
+  selectForm: {
     flex: 2,
     alignItems: 'center',
     flexDirection: 'row',
@@ -119,5 +147,6 @@ const styles = StyleSheet.create({
   },
   formSubmit: {
     flex: 1,
+    alignItems: 'center',
   },
 });
