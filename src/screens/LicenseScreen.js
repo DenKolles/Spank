@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, Button} from 'react-native';
 
-export class EULAScreen extends Component {
+export class LicenseScreen extends Component {
   render = () => {
     const {navigate} = this.props.navigation;
+    console.log("age", this.props.route.params.age);
+    console.log("gender", this.props.route.params.genderValue);
+    console.log("search", this.props.route.params.searchValue);
     return (
       <View style={styles.container}>
         <View style={styles.header}>
