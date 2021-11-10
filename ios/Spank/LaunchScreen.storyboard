@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="8hA-VI-eUx">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926.66666666666663"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yTb-aa-kCa" userLabel="LaunchScreen"/>
+                        <color key="backgroundColor" red="0.9824599624" green="0.90191608670000001" blue="0.46264970300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="8hA-VI-eUx" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="BL3-GD-aXa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8hA-VI-eUx" secondAttribute="trailing" id="Ls0-qg-Pgl"/>
+                            <constraint firstItem="yTb-aa-kCa" firstAttribute="centerX" secondItem="8hA-VI-eUx" secondAttribute="centerXWithinMargins" id="S8V-ve-wvu"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="8hA-VI-eUx" secondAttribute="bottom" id="Vlp-ep-fDU"/>
+                            <constraint firstItem="8hA-VI-eUx" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="XMF-48-2b6"/>
+                            <constraint firstItem="yTb-aa-kCa" firstAttribute="trailing" secondItem="8hA-VI-eUx" secondAttribute="trailing" id="sV6-y2-hWl"/>
+                            <constraint firstItem="8hA-VI-eUx" firstAttribute="centerY" secondItem="yTb-aa-kCa" secondAttribute="centerY" constant="-4.6666666666666856" id="u1i-pG-svB"/>
+                            <constraint firstItem="8hA-VI-eUx" firstAttribute="leading" secondItem="yTb-aa-kCa" secondAttribute="leading" id="vOS-Sl-0Yc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="42.056074766355138" y="368.03455723542118"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.9824599624" green="0.90191608670000001" blue="0.46264970300000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+    <resources>
+        <image name="LaunchScreen" width="475.66665649414062" height="1029.3333740234375"/>
+    </resources>
+</document>

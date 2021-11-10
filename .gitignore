@@ -25,7 +25,6 @@ DerivedData
 #
 build/
 .idea
-.gradle
 local.properties
 *.iml
 
@@ -57,10 +56,3 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
-
-# Project exclude paths
-/android/
-/ios/
-
-google-services.json
-GoogleService-Info.plist

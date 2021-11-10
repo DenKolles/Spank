@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import {StyleSheet, View} from "react-native";
+import { Dimensions } from 'react-native'
 
 class CirclePattern extends Component {
     render = () => {
             let rows = [];
             let cols = [];
             let height = this.props.height;
-            //ширину указываем в процентах для адаптивности разметки, длина скина 375 пикселей - это 100 процентов.
-            // то есть когда мы хотим сделать 20 пикселей ширину, то это 5 процентов экрана (если округлить)
-            let width = this.props.width  * 375 / 100;
+            //ширину указываем в процентах для адаптивности разметки
+            let width = this.props.width  * Dimensions.get('window').width / 100;
 
             for (let i = 0; i < height; i++) {
                 rows.push(i);

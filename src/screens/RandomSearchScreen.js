@@ -1,17 +1,13 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View} from 'react-native';
+import styles from '../resources/css/Style';
 
 export class RandomSearchScreen extends Component {
   render = () => {
-    const {navigate} = this.props.navigation;
-    return <View style={styles.container} />;
+    return (
+        <View style={styles.container}>
+        </View>
+    );
   };
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

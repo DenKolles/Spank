@@ -28,7 +28,7 @@ export class AgeScreen extends Component {
                      }}
                      age={this.state.age}
               />
-              <CirclePattern width="5" height="7"/>
+              <CirclePattern width="4.5" height="7"/>
             </View>
           </View>
 
@@ -40,10 +40,13 @@ export class AgeScreen extends Component {
                     if (age > 16 && age < 100) {
                       navigate('license', {age: this.state.age, genderValue: this.props.route.params.genderValue, searchValue: this.props.route.params.searchValue});}
                     else if (age > 0 && age < 17){
-                      navigate('age_denied_access', {age: this.state.age, genderValue: this.props.route.params.genderValue, searchValue: this.props.route.params.searchValue})}
-                    }}>
+                        this.props.navigation.reset({
+                            index: 0,
+                            routes: [{ name: 'age_denied_access' }],
+                        });}
+                      }}>
               <Text style={{...styles.submitButtonText, ...((age > 0 && age < 100) ? styles.backGroundColorRed: styles.backGroundColorGray)}}>NEXT</Text>
-              <CirclePattern width="10.5" height="7"/>
+              <CirclePattern width="9.5" height="7"/>
             </TouchableOpacity>
           </View>
         </View>

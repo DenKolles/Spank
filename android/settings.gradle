@@ -1,0 +1,19 @@
+rootProject.name = 'Spank'
+include ':react-native-google-signin'
+project(':react-native-google-signin').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-google-signin/android')
+include ':react-native-google-signin'
+project(':react-native-google-signin').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-google-signin/android')
+include ':react-native-google-signin'
+project(':react-native-google-signin').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-google-signin/android')
+include ':react-native-uuid-generator'
+project(':react-native-uuid-generator').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-uuid-generator/android')
+include ':react-native-local-resource'
+project(':react-native-local-resource').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-local-resource/android')
+include ':react-native-local-resource'
+project(':react-native-local-resource').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-local-resource/android')
+include ':react-native-get-random-values'
+project(':react-native-get-random-values').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-get-random-values/android')
+include ':react-native-local-resource'
+project(':react-native-local-resource').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-local-resource/android')
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'

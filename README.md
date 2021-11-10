@@ -27,16 +27,24 @@ Random video chat
                                                          
     >npm install                                                     
                                                          
-    >react-native eject                                                      
+    >react-native eject //только в случае отсутствия папок ios, android -в данном проекте они есть                                                     
 7. может потребовать принять все лицензии Android, для этого скачать [flutter doctor](https://flutter.dev/docs/get-started/install/windows)                                                                                                                                                                                                                                                                                      
     >flutter doctor -v  
     
-    >flutter doctor --android-licenses
+    >flutter doctor --android-licenses                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 8. запускаем приложение через cmd с указанием порта (так как 8081 бывает занят антивирусом), если запуск пройдет без ошибок, то приложение откроется в эмуляторе  - если есть проблемы, то задать вопросы можно *esinaekwork@gmail.com*
     >react-native run-android --port=9900                                                                                                                                                                                                                                                                                                                                                                                                       
 
 
 ##Start IOS on Mac
+####Скачать Xcode из App Store для использования эмулятора                                                                                                                                                                                                                                                                              
+1. возвращаемся в InteliJ IDEA в директорию проекта, чтобы принять лицензионное соглашение                                                                                                                                                                                                                                                                              
+    >sudo xcodebuild -license                                                                         
+2. теперь открываем проект в Xcode
+    >xed ios
+3. настраиваем симулятор (выбрать неоходимый device и скачать версию IOS) по [иструкции](https://developer.apple.com/documentation/xcode/running-your-app-in-the-simulator-or-on-a-device)                                      
+4. запускаем эмулятор нажав серый треугольник
+
 ####Скачать [IntelliJ IDEA](https://www.jetbrains.com/ru-ru/idea/download) в ней ведется разработка кода
 1. открыть проект Spank 
 2. устанавлием brew через terminal
@@ -54,7 +62,7 @@ Random video chat
               
 4. установить flutter doctor по [инструкции](https://flutter.dev/docs/get-started/install/macos)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 5. *File* -> *Project Structure* -> *SDKs* -> если java SDK еще не отображается, то добавляем и указываем путь 
-    > /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home                                                                                                                  
+    >/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home                                                                                                                  
 6. в директории проекта в terminal - генерируем папку *node_modules* 
     >npm install
     
@@ -69,11 +77,19 @@ Random video chat
     >flutter doctor -v  
 
     >flutter doctor --android-licenses
-####Скачать Xcode из App Store для использования эмулятора                                                                                                                                                                                                                                                                              
-1. возвращаемся в InteliJ IDEA в директорию проекта, чтобы принять лицензионное соглашение                                                                                                                                                                                                                                                                              
-    >sudo xcodebuild -license                                                                         
-2. теперь открываем проект в Xcode
-    >xed ios
-3. настраиваем симулятор (выбрать неоходимый device и скачать версию IOS) по [иструкции](https://developer.apple.com/documentation/xcode/running-your-app-in-the-simulator-or-on-a-device)                                      
-4. запускаем эмулятор нажав серый треугольник, success - приложение запущено на эмуляторе
 
+8. если проблем нет, то открываем приложение в xcode и после открытия стартуем на эмуляторе
+    >cd ios
+                                                        
+    >xed ios
+                                                        
+##Build app для запуска на android                                                                                                                                                                  
+1. создаем сборку
+    >cd android 
+                     
+    >./gradlew assembleRelease 
+2. сгенерированный файл можно скинуть на телефон при открытии его на телефоне - он установится                                                            
+путь до файла 
+    > android -> app -> build -> outputs -> apk -> release -> app-release.apk
+                     
+                                                                                                                                                                    

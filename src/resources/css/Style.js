@@ -82,5 +82,10 @@ export default StyleSheet.create({
     },
     backGroundColorGray: {
         backgroundColor: gray
+    },
+    licenseHtml: {
+        height: '57%',
+        marginHorizontal: '5%',
+        marginTop: '3%'
     }
 });

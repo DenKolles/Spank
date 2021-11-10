@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
 import CirclePattern from "../components/CirclePattern";
 import styles from '../resources/css/Style';
+
 export class GenderScreen extends Component {
     state={
         maleGenderPressed: false,
@@ -40,7 +41,7 @@ export class GenderScreen extends Component {
                         });
                     }}>
                         <Text style={this.state.maleGenderPressed ? styles.selectedButtonText : styles.selectButtonText}>Male</Text>
-                        <CirclePattern width="5" height="7"/>
+                        <CirclePattern width="4.5" height="7"/>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.selectButton} onPress={() => {
                         this.setState(previousState => {
@@ -52,7 +53,7 @@ export class GenderScreen extends Component {
                         });
                     }}>
                         <Text style={this.state.femaleGenderPressed ? styles.selectedButtonText : styles.selectButtonText}>Female</Text>
-                        <CirclePattern width="5" height="7"/>
+                        <CirclePattern width="4.5" height="7"/>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.selectForm}>
@@ -66,10 +67,10 @@ export class GenderScreen extends Component {
                         });
                     }}>
                         <Text style={this.state.otherGenderPressed ? styles.selectedButtonText : styles.selectButtonText}>Other</Text>
-                        <CirclePattern width="5" height="7"/>
+                        <CirclePattern width="4.5" height="7"/>
                     </TouchableOpacity>
                 </View>
-                <View style={{...styles.headerText, marginTop: '20%'}}>
+                <View style={{...styles.headerText, marginTop: '10%'}}>
                     <Text style={styles.headerText}>Who are you looking for?</Text>
                 </View>
                 <View style={{...styles.selectForm,  marginTop: '4.4%'}}>
@@ -83,7 +84,7 @@ export class GenderScreen extends Component {
                         });
                     }}>
                         <Text style={this.state.maleSearchPressed ? styles.selectedButtonText : styles.selectButtonText}>Male</Text>
-                        <CirclePattern width="5" height="7"/>
+                        <CirclePattern width="4.5" height="7"/>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.selectButton} onPress={() => {
                         this.setState(previousState => {
@@ -95,7 +96,7 @@ export class GenderScreen extends Component {
                         });
                     }}>
                         <Text style={this.state.femaleSearchPressed ? styles.selectedButtonText : styles.selectButtonText}>Female</Text>
-                        <CirclePattern width="5" height="7"/>
+                        <CirclePattern width="4.5" height="7"/>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.selectForm}>
@@ -109,7 +110,7 @@ export class GenderScreen extends Component {
                         });
                     }}>
                         <Text style={this.state.otherSearchPressed ? styles.selectedButtonText : styles.selectButtonText}>Other</Text>
-                        <CirclePattern width="5" height="7"/>
+                        <CirclePattern width="4.5" height="7"/>
                     </TouchableOpacity>
                 </View>
                 <View style={{...styles.alignCenter, marginTop: '5%'}}>
@@ -118,7 +119,7 @@ export class GenderScreen extends Component {
                         onPress={() => {
                             if (this.validateState()) navigate('age', {genderValue: this.state.genderValue, searchValue: this.state.searchValue})} }>
                         <Text style={{...styles.submitButtonText, ...(this.validateState()) ? styles.backGroundColorRed: styles.backGroundColorGray}}>LET'S GO!</Text>
-                        <CirclePattern width="10.5" height="7"/>
+                        <CirclePattern width="9.5" height="7"/>
                     </TouchableOpacity>
                 </View>
             </View>
