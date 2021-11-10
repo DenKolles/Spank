@@ -6,6 +6,7 @@ Random video chat
 
 ####Скачать [Android Studio](https://developer.android.com/studio) для использования эмулятора
 1. открыть проект Spank 
+2. установить android SDK и gradle
 2. *File* -> *Project Structure* -> *SDKs* -> если Android SDK еще не добавлена, то *+* -> *Add Android SDK* -> в поле *Android SDK Home Path:*  
     > Windows: C:\Users\\{username}\AppData\Local\Android\sdk 
     > 
@@ -47,6 +48,7 @@ Random video chat
 
 ####Скачать [IntelliJ IDEA](https://www.jetbrains.com/ru-ru/idea/download) в ней ведется разработка кода
 1. открыть проект Spank 
+2. установить gradle
 2. устанавлием brew через terminal
     >/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 3. устанавливаеем JDK11, react-native и прочие необходимые тулы
