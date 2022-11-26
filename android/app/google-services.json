@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "922360239960",
+    "project_id": "spank-89923",
+    "storage_bucket": "spank-89923.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:922360239960:android:4f2e3c674e06514782f72d",
+        "android_client_info": {
+          "package_name": "com.spank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "922360239960-vi2jfnrvncu6ge4674hml569t0l921jp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.spank",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "922360239960-j6tg82l1vp0prvio45eqdbcvhfsc7uoh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGZMRPWKqSZPqPsxPc0PvoPS9PfRh1FkE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "922360239960-j6tg82l1vp0prvio45eqdbcvhfsc7uoh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "922360239960-2ljuuc970pmqd9cl64js5sfqrrf6sfc0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.Spank"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
